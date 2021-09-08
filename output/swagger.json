@@ -1,0 +1,116 @@
+{
+  "openapi" : "3.0.1",
+  "info" : {
+    "title" : "defaultTitle",
+    "description" : "defaultDescription",
+    "version" : "0.1"
+  },
+  "servers" : [ {
+    "url" : "https://core-dev.operant.ai"
+  } ],
+  "paths" : {
+    "/auth/login" : {
+      "post" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/auth_login_body"
+              },
+              "examples" : {
+                "0" : {
+                  "value" : "{\n    \"email\":\"hello@operant.ai\",\n    \"password\":\"2XVad**3Mdd8$VXD\"\n}"
+                }
+              }
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Auto generated using Swagger Inspector",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/inline_response_200"
+                },
+                "examples" : {
+                  "0" : {
+                    "value" : "{\"access_token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2Nlc3NfdXVpZCI6ImIyOTJjMmU0LTZjMjItNDU0NS04MTgwLTI2NTUxZGNmM2YyNCIsImF1dGhvcml6ZWQiOnRydWUsImV4cCI6MTYzMTEzOTk1MCwidXNlcl9pZCI6IjMyNWEwZDgwLThiMzEtNDAwZC05MjIzLTk3MTM5MDE5NmRkOCJ9.17OcH9Bfn3jzQZDu-tC7u8RH64eoVAcHkWCRHLJwEVY\",\"refresh_token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MzE1NjQ3NTAsInJlZnJlc2hfdXVpZCI6IjUwODkxZWVkLTM3NzgtNGNjNi05MWUxLTY2YTE4MWY5ZWNjYiIsInVzZXJfaWQiOiIzMjVhMGQ4MC04YjMxLTQwMGQtOTIyMy05NzEzOTAxOTZkZDgifQ.OkII9p9JJwpInKlpcSCCWYS4ESMgH1KkOZ3ezfCxcwM\",\"user_details\":{\"user_id\":\"325a0d80-8b31-400d-9223-971390196dd8\",\"organization_id\":\"64261157-c955-45b4-a1de-f71937ee795a\",\"organization_name\":\"Acme Development\",\"subscription_id\":\"5b86d20f-658a-4d3d-9e17-38ad3174e1eb\",\"team_id\":\"07e23e51-9747-43a0-a1f6-954b8798876e\",\"team_name\":\"Acme-Dev-Team\",\"roles\":\"org-owner,team-owner,team-member,cluster-operator\",\"name\":\"Anna H\",\"email\":\"hello@operant.ai\",\"status\":\"active\"}}\n"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "servers" : [ {
+          "url" : "https://core-dev.operant.ai"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "https://core-dev.operant.ai"
+      } ]
+    }
+  },
+  "components" : {
+    "schemas" : {
+      "auth_login_body" : {
+        "type" : "object",
+        "properties" : {
+          "password" : {
+            "type" : "string"
+          },
+          "email" : {
+            "type" : "string"
+          }
+        }
+      },
+      "inline_response_200" : {
+        "type" : "object",
+        "properties" : {
+          "access_token" : {
+            "type" : "string"
+          },
+          "refresh_token" : {
+            "type" : "string"
+          },
+          "user_details" : {
+            "type" : "object",
+            "properties" : {
+              "subscription_id" : {
+                "type" : "string"
+              },
+              "user_id" : {
+                "type" : "string"
+              },
+              "organization_id" : {
+                "type" : "string"
+              },
+              "roles" : {
+                "type" : "string"
+              },
+              "name" : {
+                "type" : "string"
+              },
+              "organization_name" : {
+                "type" : "string"
+              },
+              "team_id" : {
+                "type" : "string"
+              },
+              "team_name" : {
+                "type" : "string"
+              },
+              "email" : {
+                "type" : "string"
+              },
+              "status" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
